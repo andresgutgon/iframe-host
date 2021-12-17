@@ -9,4 +9,4 @@ foreman start -f Procfile.dev
 ```
 
 ### Deploy
-Go to Netlify and run deploy for now.
+Just push to `main` branch. Netlify takes care of it.

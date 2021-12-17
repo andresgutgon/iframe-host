@@ -25,15 +25,13 @@ function replaceIframeDomain () {
     if (err) throw err;
   })
   // Clean ./dist
-  rimraf('./dist/*', function () { console.log('done'); })
+  rimraf('./dist/*', function () {
+    // Copy favicon
+    fs.copyFileSync('favicon.ico', 'dist/favicon.ico', fs.constants.COPYFILE_EXCL)
 
-  // Copy favicon
-   fs.copyFile('./favicon.ico', './dist/favicon.ico', (err) => {
-     if (err) throw err;
-   })
-
-  // use Vercel domain in production
-  changeDomain()
+    // use Vercel domain in production
+    changeDomain()
+  })
 }
 
 replaceIframeDomain()
