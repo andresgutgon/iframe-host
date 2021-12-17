@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build:css": "yarn tailwindcss -i input.css -o output.css --watch",
+    "build:css:pro": "yarn tailwindcss -i input.css -o dist/output.css --minify",
+    "deploy": "node ./scripts/replaceIframeDomain.js && yarn build:css:pro"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.6"
+  }
+}

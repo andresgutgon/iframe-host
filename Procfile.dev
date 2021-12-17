@@ -1,0 +1,2 @@
+html: npx http-server
+css: yarn build:css
