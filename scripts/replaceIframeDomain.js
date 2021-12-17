@@ -27,6 +27,11 @@ function replaceIframeDomain () {
   // Clean ./dist
   rimraf('./dist/*', function () { console.log('done'); })
 
+  // Copy favicon
+   fs.copyFile('./favicon.ico', './dist/favicon.ico', (err) => {
+     if (err) throw err;
+   })
+
   // use Vercel domain in production
   changeDomain()
 }
