@@ -7,3 +7,6 @@ This will server the HTML in a localhost:PORT and build the CSS.
 ```
 foreman start -f Procfile.dev
 ```
+
+### Deploy
+Go to Netlify and run deploy for now.
