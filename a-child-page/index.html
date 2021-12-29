@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coopdevs community maps iframe integration test</title>
+    <link href="/output.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div class='container py-4'>
+      <h1 class="text-3xl font-bold text-center">iFrame integration </h1>
+      <p class='text-center'>
+        This is an <span class='bg-gray-200 py-0.5 px-1 inline-block rounded'>iframe</span>&nbsp;integration
+        of <a class='text-blue-700 underline' href="https://gitlab.com/coopdevs/community-maps-builder" target="_blank">Coopdevs community maps builder</a>
+      </p>
+    </div>
+    <div class='flex px-2 sm:px-6 min-h-[calc(100vh-153px)] sm:min-h-[calc(100vh-140px)] w-full mt-6 mx-auto'>
+      <div class='min-h-full w-full rounded overflow-hidden bg-gray-100 '>
+        <iframe
+          allowfullscreen
+          id='map'
+          class="h-full w-full"
+          src="http://localhost:3000/demo/maps/first-map"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      id="community-maps-builder"
+      data-iframe-id="map"
+      src="http://localhost:3000/iframe-integration.js"
+    ></script>
+  </body>
+</html>
