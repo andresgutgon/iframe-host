@@ -1,6 +1,5 @@
 module.exports = {
-  content: [],
-  content: ["./index.html"],
+  content: ["./index.html", "./a-child-page/index.html"],
   theme: {
     extend: {
       container: {
@@ -8,5 +7,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
