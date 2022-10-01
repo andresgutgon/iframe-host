@@ -1,6 +1,9 @@
 const fs = require('fs')
 const rimraf = require('rimraf')
 
+// Production URL:
+// 'https://community-maps-builder.vercel.app/'
+
 /**
  * In Netlify we want to point to Vercel domain
  */
@@ -11,7 +14,7 @@ function changeDomain () {
 
       const result = data.replace(
         /http\:\/\/localhost\:3000/g,
-        'https://community-maps-builder.vercel.app/'
+        'https://community-maps-builder-git-fix-ios-not-loading-maps-perretes.vercel.app'
       )
 
       fs.writeFile(`./dist/${page}`, result, 'utf8', function (err) {

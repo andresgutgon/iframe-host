@@ -1,2 +1,2 @@
-html: npx http-server
+html: npx http-server -p 8000
 css: yarn build:css
